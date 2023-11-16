@@ -1,4 +1,6 @@
-import styles from "../styles";
+/* eslint-disable-next-line padded-blocks */
+
+import styles from '../styles';
 
 const StartSteps = ({ number, text }) => (
   <div className={`${styles.flexCenter} flex-row`}>

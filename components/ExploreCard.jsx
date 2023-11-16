@@ -1,21 +1,23 @@
 'use client';
 
-import { motion } from "framer-motion";
-import { fadeIn } from "../utils/motion";
-import styles from "../styles";
+/* eslint-disable-next-line padded-blocks */
+
+import { motion } from 'framer-motion';
+import { fadeIn } from '../utils/motion';
+import styles from '../styles';
 
 const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
   <motion.div
-  variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-  className={`relative ${
-    active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
-  } flex items-center justify-center min-w-[170px] h-[700px] transition-[flex] duration-[0.7] ease-out-flex cursor-pointer`}
-  onClick={()=> handleClick(id)}
+    variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
+    className={`relative ${
+      active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
+    } flex items-center justify-center min-w-[170px] h-[700px] transition-[flex] duration-[0.7] ease-out-flex cursor-pointer`}
+    onClick={() => handleClick(id)}
   >
-    <img 
-    src={imgUrl}
-    alt={title}
-    className="absolute w-full h-full object-cover rounded-[24px]"
+    <img
+      src={imgUrl}
+      alt={title}
+      className="absolute w-full h-full object-cover rounded-[24px]"
     />
     {active !== id ? (
       <h3 className="font-samibold sm:text-[26px] text-[18] text-white absolute z-0 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0]">
@@ -29,7 +31,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
         <p className="font-normal text-[16px] leading-[20px] text-white uppercase">
           Enter the Metaverse
         </p>
-        <h2 className="mt-[24px] font-samibold sm:text-[32px] text-[24px] text-white" >
+        <h2 className="mt-[24px] font-samibold sm:text-[32px] text-[24px] text-white">
           {title}
         </h2>
       </div>
